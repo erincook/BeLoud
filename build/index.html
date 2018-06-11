@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BeLoud Ham Radio</title>
+    <link id="base-css" href="/css/mainstyle.css" rel="stylesheet" type="text/css">
+     <link rel="icon" href="img/micImage.png" type="image/x-icon" /> 
+    <script src="mainjs/helper.js"></script>
+    <script src="mainjs/router.js"></script>
+   <!-- <script src="mainjs/user.js"></script> --> 
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.4/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.4/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.0.4/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    
+  </head>
+  <body>
+
+   <div id="header-content"></div>
+   <div id="page-content"></div>
+   <div id="footer-content"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          console.log(`Firebase SDK loaded with ${features.join(', ')}`);
+          loadPage(); 
+        } catch (e) {
+          console.log(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+    <script>
+    function loadPage() {
+        helper.loadTemplate('header-content', 'modules', 'header'); 
+        helper.loadTemplate('footer-content', 'modules', 'footer'); 
+    }
+    </script>
+    
+  </body>
+</html>

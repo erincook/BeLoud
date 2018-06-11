@@ -1,0 +1,63 @@
+@import '../../../style/variables'; 
+
+#logo-container {
+	padding: 15px; 
+	background-color: $secondary-color; 
+	color: $white; 
+	border-bottom: 2px solid $primary-color; 
+	height: 65px; 
+	.beside-header {
+		font-size: 36px; 
+		vertical-align: middle;
+    	line-height: 56px;
+	}
+	h1 {
+		display: inline-block; 
+		background-color: #F0631F;
+    	font-size: 25px;
+    	width: 100px;
+    	padding: 15px;
+    	border-radius: 5px;
+    	text-align: center;
+    	vertical-align: middle; 
+	}
+	.sub-header.whispered {
+		color: $white; 
+		font-style: italic; 
+    	margin-left: 40px;
+    	font-size: 12px;
+	}
+	
+}
+#nav {
+		width: 100%; 
+		clear: both; 
+		padding: 15px; 
+		cursor: pointer; 
+		a.nav-link {
+			display: inline-block; 
+			color: $secondary-color; 
+			padding: 0 15px 15px 15px; 
+			position: relative; 
+			&.active {
+				border-bottom: 1px solid $secondary-color; 
+			}
+			&:not(.active):after {
+				content: '';
+				display: block;
+				border-bottom: 2px solid $secondary-color;
+				width: 0;
+				position: absolute;
+				right: 0;
+				top: 30px; 
+				-webkit-transition: 1s ease;
+				transition: 1s ease;
+			}
+
+			&:not(.active):hover:after { 
+			  width: 100%; 
+			}
+		}
+
+		
+}

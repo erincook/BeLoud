@@ -1,0 +1,7 @@
+$primary-color: #F0631F;  /*orange*/
+$secondary-color: #002640; /*dark blue*/
+
+$white: #FDFDFD; 
+$charcoal: #272727; 
+$medium-gray: #D5D5D5; 
+$light-gray: #DCDCDC; 

@@ -1,0 +1,28 @@
+{
+  "name": "beloud",
+  "version": "1.0.0",
+  "description": "online pay to play ham radio",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erin Cook",
+  "license": "ISC",
+  "dependencies": {
+    "firebaseui": "^2.0.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erincook/BeLoud.git"
+  },
+  "bugs": {
+    "url": "https://eyecubedsquared.freshdesk.com/a/tickets/filters/unresolved"
+  },
+  "homepage": "https://BeLoud.us"
+}

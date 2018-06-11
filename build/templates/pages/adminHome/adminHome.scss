@@ -1,0 +1,11 @@
+@import '../../../style/variables'; 
+#adminHome {
+	section {
+		padding: 15px; 
+		margin: 15px 0; 
+		border: 1px solid $medium-gray; 
+		border-radius: 5px; 
+		background-color: $light-gray; 
+	}
+}
+

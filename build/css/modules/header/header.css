@@ -1,0 +1,51 @@
+/*orange*/
+/*dark blue*/
+#logo-container {
+  padding: 15px;
+  background-color: #002640;
+  color: #FDFDFD;
+  border-bottom: 2px solid #F0631F;
+  height: 65px; }
+  #logo-container .beside-header {
+    font-size: 36px;
+    vertical-align: middle;
+    line-height: 56px; }
+  #logo-container h1 {
+    display: inline-block;
+    background-color: #F0631F;
+    font-size: 25px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle; }
+  #logo-container .sub-header.whispered {
+    color: #FDFDFD;
+    font-style: italic;
+    margin-left: 40px;
+    font-size: 12px; }
+
+#nav {
+  width: 100%;
+  clear: both;
+  padding: 15px;
+  cursor: pointer; }
+  #nav a.nav-link {
+    display: inline-block;
+    color: #002640;
+    padding: 0 15px 15px 15px;
+    position: relative; }
+    #nav a.nav-link.active {
+      border-bottom: 1px solid #002640; }
+    #nav a.nav-link:not(.active):after {
+      content: '';
+      display: block;
+      border-bottom: 2px solid #002640;
+      width: 0;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      -webkit-transition: 1s ease;
+      transition: 1s ease; }
+    #nav a.nav-link:not(.active):hover:after {
+      width: 100%; }
